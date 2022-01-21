@@ -75,10 +75,15 @@ $breakpoints: (
 }
 
 // Pseudo
-@mixin pseudo($content, $top, $left) {
+// $x => for left or right
+// $y => for top or bottom
+@mixin pseudo($content, $x, $y) {
   content: "#{$content}";
-  top: $top;
-  left: $left;
+  position: absolute;
+  left: $x;
+  //right: $x;
+  top: $y;
+  //bottom: $y;
 }
 
 // input Placholder
